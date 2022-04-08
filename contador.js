@@ -10,7 +10,8 @@
 //btnAumentar.addEventListener('click', () => {
 //    contador++
 //    span.textContent = contador 
-//})
+//}
+
 //
 //btndisminuir.addEventListener('click', ()=>{
 //    contador--
@@ -35,6 +36,10 @@ container.addEventListener('click', (e)=>{
     if (e.target.classList.contains('btn-danger')) {
         contador--
         span.textContent = contador
+        if (contador < 0) {
+            span.textContent = 0
+            alert('ahora aumente')
+        }
     }
     e.stopPropagation()
 })
